@@ -1,1 +1,1 @@
-# google-tag-manager-template
+# Opticks SensorJS repo for GTM
