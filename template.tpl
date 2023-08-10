@@ -91,6 +91,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 var injectScript = require('injectScript');
 var encodeUriComponent = require('encodeUriComponent');
+var encodeUri = require('encodeUri');
 var logToConsole = require('logToConsole');
 var JSON = require('JSON');
 
@@ -105,7 +106,7 @@ function onFailure () {
   data.gtmOnFailure();
 }
 
-var url = domain + '/o/' + data.sensorId;
+var url = domain + '/o/' + encodeUri(data.sensorId);
 if (data.macros) {
   for (let i = 0; i < data.macros.length; ++i) {
     if(i===0) {
@@ -180,6 +181,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 10/27/2022, 5:54:39 PM
+Created on 8/10/2023, 12:41:27 PM
 
 
